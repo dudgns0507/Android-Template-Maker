@@ -7,13 +7,20 @@
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.dudgns0507.androidtemplatemaker.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.dudgns0507.androidtemplatemaker.services.MyProjectService"/>
-    </extensions>
+    <actions>
+        <action id="com.github.dudgns0507.template.create.CreateTemplateAction"
+                class="com.github.dudgns0507.template.create.CreateTemplateAction"
+                text="New Template"
+                description="Create file with template">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
 
-    <applicationListeners>
-        <listener class="com.github.dudgns0507.androidtemplatemaker.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+        <action id="com.github.dudgns0507.template.config.TemplateSettingDialogAction"
+                class="com.github.dudgns0507.template.config.TemplateSettingDialogAction"
+                text="Android-Template-Maker Settings"
+                description="Android-Template-Maker settings">
+            <override-text place="MainMenu" text="Android-Template-Maker Settings"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
