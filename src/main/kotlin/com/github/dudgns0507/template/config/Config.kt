@@ -7,8 +7,8 @@ import com.intellij.openapi.components.Storage
 import com.intellij.util.xmlb.XmlSerializerUtil
 
 @State(
-    name = "WaistUp",
-    storages = [Storage(value = "WaistUp.xml")]
+    name = "Config",
+    storages = [Storage(value = "Config.xml")]
 )
 class Config : PersistentStateComponent<Config> {
     @JvmField

@@ -10,7 +10,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.dudgns0507.template.config.Config"/>
     </extensions>
-    
+
     <actions>
         <action id="com.github.dudgns0507.template.create.CreateTemplateAction"
                 class="com.github.dudgns0507.template.create.CreateTemplateAction"
