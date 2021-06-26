@@ -20,6 +20,7 @@
                 text="Android-Template-Maker Settings"
                 description="Android-Template-Maker settings">
             <override-text place="MainMenu" text="Android-Template-Maker Settings"/>
+            <keyboard-shortcut first-keystroke="control shift S" keymap="$default"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
     </actions>
