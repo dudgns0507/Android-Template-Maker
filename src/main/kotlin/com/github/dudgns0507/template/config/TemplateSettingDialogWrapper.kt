@@ -8,7 +8,7 @@ import javax.swing.JPanel
 import javax.swing.JTextField
 
 class TemplateSettingDialogWrapper(
-        defaultPath: String
+    defaultPath: String
 ) : DialogWrapper(true) {
     private val config: Config by lazy {
         Config.createInstance()

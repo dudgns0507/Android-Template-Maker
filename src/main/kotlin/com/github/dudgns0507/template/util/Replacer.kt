@@ -4,8 +4,8 @@ import com.github.dudgns0507.template.ext.replaceAllIfNotNull
 
 class Replacer {
     fun replace(
-            content: String,
-            replacements: Replacements
+        content: String,
+        replacements: Replacements
     ): String {
         return content.replaceAllIfNotNull("\$PACKAGE\$", replacements.packageName)
             .replaceAllIfNotNull("\$LAYOUT_NAME\$", replacements.layoutName)
@@ -15,8 +15,8 @@ class Replacer {
 }
 
 data class Replacements(
-        val packageName: String? = null,
-        val layoutName: String? = null,
-        val name: String? = null,
-        val viewModelPackage: String? = null
+    val packageName: String? = null,
+    val layoutName: String? = null,
+    val name: String? = null,
+    val viewModelPackage: String? = null
 )

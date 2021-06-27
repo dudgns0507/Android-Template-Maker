@@ -8,7 +8,7 @@ import com.intellij.openapi.vfs.VirtualFileManager
 import com.intellij.util.ResourceUtil
 
 class FileHelper(
-        private val replacer: Replacer
+    private val replacer: Replacer
 ) {
     fun isFileExistWithPath(path: String): Boolean {
         val file = VirtualFileManager.getInstance().findFileByUrl("file://$path")
@@ -16,11 +16,11 @@ class FileHelper(
     }
 
     fun createFileWithTemplate(
-            directory: VirtualFile,
-            name: String,
-            fileExtension: FileExtension,
-            templateFileName: String,
-            replacements: Replacements
+        directory: VirtualFile,
+        name: String,
+        fileExtension: FileExtension,
+        templateFileName: String,
+        replacements: Replacements
     ) {
         val kotlinFile = directory.createChildData(this, "$name.${fileExtension.extension}")
         val templateContent = getTemplate(templateFileName)
