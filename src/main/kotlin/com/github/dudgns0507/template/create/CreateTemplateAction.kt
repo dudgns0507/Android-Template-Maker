@@ -5,6 +5,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 
 class CreateTemplateAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-
+        print("")
     }
 }
