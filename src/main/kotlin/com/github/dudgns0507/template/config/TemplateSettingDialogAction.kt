@@ -9,6 +9,7 @@ class TemplateSettingDialogAction : AnAction() {
     }
 
     override fun actionPerformed(e: AnActionEvent) {
+//        val dialog = TemplateSettingDialog()
         val dialog = TemplateSettingDialogWrapper(config.templatePath)
         dialog.showAndGet()
     }
